@@ -6,6 +6,7 @@ class MyClass:
         :param kwargs:
         """
         print('Class instance creation')
+        return object.__new__(cls)
 
     def __init__(self):
         """
@@ -26,6 +27,3 @@ class MyClass:
 if __name__ == '__main__':
     # Launching our app
     mc = MyClass()
-
-    # Destruct instance
-    mc.__del__()
